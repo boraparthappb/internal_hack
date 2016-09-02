@@ -1,0 +1,10 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_menu_login" type="drawable">@drawable/login</item>
+    <item name="ic_menu_register" type="drawable">@drawable/register_white</item>
+    <item name="ic_menu_search_jobs" type="drawable">@drawable/search</item>
+    <item name="ic_menu_about_us" type="drawable">@drawable/about</item>
+    <item name="ic_menu_fast_forward" type="drawable">@drawable/fastforward</item>
+    <item name="ic_menu_faqs" type="drawable">@drawable/faq</item>
+    <item name="ic_menu_feedback" type="drawable">@drawable/rate</item>
+    <item name="ic_menu_promote" type="drawable">@drawable/sharethisapp</item>
+</resources>
