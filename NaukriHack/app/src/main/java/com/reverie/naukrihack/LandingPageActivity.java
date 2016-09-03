@@ -1,5 +1,6 @@
 package com.reverie.naukrihack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,11 +12,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.reverie.Listener.LocalizeListener;
 import com.reverie.Network.LocalizeAsync;
+import com.reverie.model.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +30,7 @@ public class LandingPageActivity extends AppCompatActivity
     HashMap<String, MenuItem> mapEngMenuItem = new HashMap<String, MenuItem>();
     private LocalizeListener listener;
     private MenuItem nav_language;
+    private LinearLayout header;
 
 
     @Override
@@ -45,6 +49,15 @@ public class LandingPageActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView =  navigationView.getHeaderView(0);
+//        View headerView= navigationView.inflateHeaderView(R.layout.nav_header_landing_page);
+        header = (LinearLayout)headerView.findViewById(R.id.header);
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),UserDetails.class));
+            }
+        });
 
 
         // get menu from navigationView
