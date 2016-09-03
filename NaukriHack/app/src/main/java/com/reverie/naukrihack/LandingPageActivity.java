@@ -243,7 +243,8 @@ public class LandingPageActivity extends AppCompatActivity
                         "messages", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.recuiter_lay2:
-                Toast.makeText(this, "Jobs for you", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),JobsForYou.class);
+                startActivity(i);
                 break;
             case R.id.recuiter_lay3:
                 Toast.makeText(this, "Critical\n" +
