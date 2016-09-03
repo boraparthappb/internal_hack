@@ -33,7 +33,7 @@ public class UserDetails extends AppCompatActivity {
     private HashMap<String, TextView> stringViewMap;
     public static HashMap<String, String> stringEngHindMap;
     private ArrayList<String> userDetailsStrings;
-    public static boolean isHindi = true;
+    public static boolean isHindi = false;
     private TextView pageTitle, userName, userDesignation, userLocation, userExp, userContactDetails, userMail,userPhone,
             resumeHeadline, resumeHeadlineValue, keySkills, keySkillsValue, empDetails, empDetailsDesignation,
             empDetailsFromTo, empDetailsRole, ITSkills, ITSkillsName1, ITSkillsName2, ITSkillsExp1, ITSkillsExp2,

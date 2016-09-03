@@ -12,12 +12,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.reverie.Listener.LocalizeListener;
 import com.reverie.Network.LocalizeAsync;
+import com.reverie.model.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,6 +30,7 @@ public class LandingPageActivity extends AppCompatActivity
     HashMap<String, MenuItem> mapEngMenuItem = new HashMap<String, MenuItem>();
     private LocalizeListener listener;
     private MenuItem nav_language;
+    private LinearLayout header;
 
 
     @Override
@@ -37,14 +39,7 @@ public class LandingPageActivity extends AppCompatActivity
         setContentView(R.layout.activity_landing_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button userPro = (Button)findViewById(R.id.userProfile);
-        userPro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LandingPageActivity.this,UserDetails.class);
-                startActivity(i);
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,6 +49,15 @@ public class LandingPageActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView =  navigationView.getHeaderView(0);
+//        View headerView= navigationView.inflateHeaderView(R.layout.nav_header_landing_page);
+        header = (LinearLayout)headerView.findViewById(R.id.header);
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),UserDetails.class));
+            }
+        });
 
 
         // get menu from navigationView
@@ -116,6 +120,7 @@ public class LandingPageActivity extends AppCompatActivity
 
                     }
                     nav_language.setTitle("English");
+                    UserDetails.isHindi = true;
                 }
             }
         };
@@ -171,6 +176,9 @@ public class LandingPageActivity extends AppCompatActivity
         else if (id== R.id.nav_language){
             callLocalize(item.getTitle());
         }
+        else if (id== R.id.nav_faq){
+            startActivity(new Intent(getApplicationContext(),Faq.class));
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -180,7 +188,6 @@ public class LandingPageActivity extends AppCompatActivity
     private void callLocalize(CharSequence title) {
         if (title.toString().contains("हिन्दी")){
 
-            Log.e("inside if","---");
             ArrayList<String> inStrings = new ArrayList<String>();
             for (String key:mapEngView.keySet()){
                 inStrings.add(key);
@@ -225,6 +232,7 @@ public class LandingPageActivity extends AppCompatActivity
 
             }
             nav_language.setTitle("हिन्दी");
+            UserDetails.isHindi = false;
         }
     }
 
