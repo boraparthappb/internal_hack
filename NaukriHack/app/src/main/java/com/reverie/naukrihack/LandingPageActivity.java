@@ -1,5 +1,6 @@
 package com.reverie.naukrihack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class LandingPageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -19,6 +22,14 @@ public class LandingPageActivity extends AppCompatActivity
         setContentView(R.layout.activity_landing_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Button button =(Button)findViewById(R.id.userProfile);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i  = new Intent(LandingPageActivity.this, UserDetails.class);
+                startActivity(i);
+            }
+        });
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

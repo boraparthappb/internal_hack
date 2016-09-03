@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.reverie.naukrihack.UserDetails">
     <LinearLayout
         android:background="#fff"
@@ -14,9 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageButton
+            android:id="@+id/user_back"
+            android:background="@drawable/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/user_page_title"
             android:elevation="5dp"
             android:textSize="22dp"
             android:layout_gravity="center"
@@ -25,13 +27,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:padding="10dp"
                 android:orientation="vertical"
                 android:background="#3F51B5"
                 android:layout_width="match_parent"
@@ -43,22 +48,723 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/user_pic"
+                        android:src="@drawable/person"
                         android:padding="2dp"
                         android:layout_weight="0.4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" />
                     <LinearLayout
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:padding="2dp"
                         android:gravity="left"
                         android:layout_weight="0.6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content">
                         <TextView
+                            android:padding="2dp"
                             android:id="@+id/user_name"
+                            android:text="Monoranjan Bora"
                             android:textColor="#fff"
                             android:textSize="16dp"
-                            android:text="Nayan Jyoti Das"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:padding="2dp"
+                            android:id="@+id/user_designation"
+                            android:textColor="#fff"
+                            android:text="Software Developer"
+                            android:textSize="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:padding="2dp"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:src="@drawable/location_white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/user_loc"
+                                android:textColor="#fff"
+                                android:textSize="14dp"
+                                android:text="Bangalore"
+                                android:paddingLeft="2dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:padding="2dp"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:src="@drawable/experience_white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/user_exp"
+                                android:textColor="#fff"
+                                android:textSize="14dp"
+                                android:text="1 Year 7 Months"
+                                android:paddingLeft="2dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:padding="2dp"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:src="@drawable/salary_white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/user_ctc"
+                                android:textColor="#fff"
+                                android:textSize="14dp"
+                                android:text="4 Lacs 50 Thousands"
+                                android:paddingLeft="2dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/user_contactdetails"
+                    android:padding="2dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Contact Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:padding="2dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/email_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="nayan.das@reverieinc.com"
+                        android:paddingLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/tick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="2dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/contactdetail_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/user_phone"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="8486478369"
+                        android:paddingLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/tick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_resumeheadline"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="Resume Headline"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/user_resumeheadlinedata"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:text="Android and Core Java Developer with 1.5 year experience."
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_edge_shadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_keySkil"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="Key Skills"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/user_keySkillData"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:text="Android, Core Java,JSON, JSP, SQLite, C++, DBMS, C"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_edge_shadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_employmentDetails"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="Employment Details"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/user_employmentDesignation"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:text="Software Developer"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/user_employmentCompany"
+                        android:textColor="#000"
+                        android:textSize="16dp"
+                        android:text="Reverie Language Technologies pvt ltd"
+                        android:paddingLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/user_employmentExp"
+                    android:textColor="#808080"
+                    android:textSize="16dp"
+                    android:text="Jun 2015-Present(1 Year 3 Months)"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/user_employmentRole"
+                    android:textColor="#808080"
+                    android:textSize="16dp"
+                    android:text="To develop Android Application"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_edge_shadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_ITSkill"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="IT Skills"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/user_ITSkillName"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:text="Android"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_ITSkillExp"
+                            android:textColor="#808080"
+                            android:textSize="16dp"
+                            android:text="2 years 0 Months"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_ITSkillLastUsed"
+                            android:textColor="#808080"
+                            android:textSize="16dp"
+                            android:text="2016"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#55111111"/>
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/user_ITSkillName1"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:text="Java"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_ITSkillExp1"
+                            android:textColor="#808080"
+                            android:textSize="16dp"
+                            android:text="3 years 0 Months"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_ITSkillLastUsed1"
+                            android:textColor="#808080"
+                            android:textSize="16dp"
+                            android:text="2016"
+                            android:paddingLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_edge_shadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_EducationDetails"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="Education"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/user_EducationCourse"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:text="BCA"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/education_icon_grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/user_EducationOrg"
+                        android:textColor="#000"
+                        android:textSize="16dp"
+                        android:text="Cotton College, Guwahati"
+                        android:paddingLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/user_EducationYear"
+                    android:textColor="#808080"
+                    android:textSize="16dp"
+                    android:text="2011"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/user_EducationCourse1"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:text="MCA"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/education_icon_grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/user_EducationOrg1"
+                        android:textColor="#000"
+                        android:textSize="16dp"
+                        android:text="Tezpur University, Assam"
+                        android:paddingLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/user_EducationYear1"
+                    android:textColor="#808080"
+                    android:textSize="16dp"
+                    android:text="2015"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_edge_shadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_workDetails"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="Work Details"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/user_workDetailsRole"
+                            android:text="Role"
+                            android:textSize="16dp"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_workDetailsFunctionalArea"
+                            android:textSize="16dp"
+                            android:text="Functional Area"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_workDetailsIndustry"
+                            android:text="Industry"
+                            android:textSize="16dp"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsJobPreference"
+                            android:text="Job Preference"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsPrefferedLocation"
+                            android:text="Preferred Location"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsAvailToJoin"
+                            android:text="Available to Join"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsWorkAuth"
+                            android:text="Work Authorization"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/user_workDetailsRoleName"
+                            android:text="Software Developer"
+                            android:textSize="16dp"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_workDetailsFunctionalAreaName"
+                            android:textSize="16dp"
+                            android:text="IT Software - Mobile"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_workDetailsIndustryName"
+                            android:text="IT-Software"
+                            android:textSize="16dp"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsJobPreferenceName"
+                            android:text="Permanent"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsPrefferedLocationName"
+                            android:text="Bangalore"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsAvailToJoinName"
+                            android:text="2 Months"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_workDetailsWorkAuthName"
+                            android:text="India"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/box_edge_shadows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/user_personalDetails"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:text="Personal Details"
+                    android:paddingLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/user_personalDetailsDOB"
+                            android:text="Date of Birth"
+                            android:textSize="16dp"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_personalDetailsGender"
+                            android:textSize="16dp"
+                            android:text="Gender"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_personalDetailsHomeTown"
+                            android:text="Hometown"
+                            android:textSize="16dp"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_personalDetailsPin"
+                            android:text="Pincode"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_personalDetailsMartialStatus"
+                            android:text="Marital Status"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_personalDetailsAdd"
+                            android:text="Permanent Address"
+                            android:textColor="#808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/user_personalDetailsDOBValue"
+                            android:text="May 01, 1990"
+                            android:textSize="16dp"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_personalDetailsGenderValue"
+                            android:textSize="16dp"
+                            android:text="Male"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/user_personalDetailsHomeTownValue"
+                            android:text="Jorhat"
+                            android:textSize="16dp"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_personalDetailsPinValue"
+                            android:text="785001"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_personalDetailsMartialStatusValue"
+                            android:text="Single"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textSize="16dp"
+                            android:id="@+id/user_personalDetailsAddValue"
+                            android:text="Guwahati, Assam"
+                            android:textColor="#000"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
