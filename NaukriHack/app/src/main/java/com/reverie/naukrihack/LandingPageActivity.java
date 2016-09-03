@@ -120,6 +120,7 @@ public class LandingPageActivity extends AppCompatActivity
 
                     }
                     nav_language.setTitle("English");
+                    UserDetails.isHindi = true;
                 }
             }
         };
@@ -229,6 +230,7 @@ public class LandingPageActivity extends AppCompatActivity
 
             }
             nav_language.setTitle("हिन्दी");
+            UserDetails.isHindi = false;
         }
     }
 

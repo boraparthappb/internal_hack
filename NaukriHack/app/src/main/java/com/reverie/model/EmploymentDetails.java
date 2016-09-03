@@ -9,9 +9,9 @@ public class EmploymentDetails {
     public String workedFromTO;
     public String role;
     public EmploymentDetails(){
-        this.designation = "Software Developer";
-        this.company = "Naukri.com";
+        this.designation = "Sr. Software Developer";
+        this.company = "Reverie Language Technologies pvt ltd";
         this.workedFromTO = "Jun 2015 - Present(1 Year 3 Months)";
-        this.role = "To develop android application";
+        this.role = "To develop Android Application";
     }
 }
