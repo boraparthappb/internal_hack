@@ -48,7 +48,6 @@ public class LandingPageActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View headerView =  navigationView.getHeaderView(0);
-//        View headerView= navigationView.inflateHeaderView(R.layout.nav_header_landing_page);
         header = (LinearLayout)headerView.findViewById(R.id.header);
         header.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,7 +168,6 @@ public class LandingPageActivity extends AppCompatActivity
         } else if (id == R.id.nav_search_job) {
             startActivity(new Intent(getApplicationContext(),SearchJobs.class));
 
-            //startActivity(new Intent(getApplicationContext(),JobsForYou.class));
         } else if (id == R.id.nav_about) {
 
         }
