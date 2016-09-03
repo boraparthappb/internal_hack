@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search_jobs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.reverie.naukrihack.SearchJobs"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/key"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keywords"/>
+    <EditText
+        android:id="@+id/edtSkill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Skill, Designation, Role"/>
+    <TextView
+        android:id="@+id/locTv"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Location"/>
+    <EditText
+        android:id="@+id/edtLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Location"/>
+    <TextView
+        android:id="@+id/expTV"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Experience (in Years)"/>
+    <EditText
+        android:id="@+id/edtExper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E.g: 3"/>
+    <TextView
+        android:id="@+id/salaryTV"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Expected Salary"/>
+    <EditText
+        android:id="@+id/edtSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Minimum Salary(Lakhs/Annum)"/>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Jobs"/>
+
+</LinearLayout>

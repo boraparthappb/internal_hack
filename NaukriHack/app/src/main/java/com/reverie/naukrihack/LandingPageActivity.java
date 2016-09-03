@@ -169,6 +169,7 @@ public class LandingPageActivity extends AppCompatActivity
         } else if (id == R.id.nav_register) {
 
         } else if (id == R.id.nav_search_job) {
+            startActivity(new Intent(getApplicationContext(),SearchJobs.class));
 
         } else if (id == R.id.nav_about) {
 
