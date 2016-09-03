@@ -61,11 +61,9 @@ public class UserDetails extends AppCompatActivity {
         stringViewMap = new HashMap<>();
         stringEngHindMap = new HashMap<>();
         initViews();
+        setTextInEnglish();
         if(isHindi)
             new LocalizationAsync(UserDetails.this,userDetailsStrings,"english","hindi").execute();
-        else {
-
-        }
     }
 
     public void localizePage(){

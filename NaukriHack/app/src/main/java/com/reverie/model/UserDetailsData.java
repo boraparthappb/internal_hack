@@ -25,7 +25,7 @@ public class UserDetailsData {
     public static UserDetailsData userDetails = new UserDetailsData();
 
     private UserDetailsData(){
-        name = "Monoranjan Bora";
+        name = "Honey Singh";
         designation = "Software Developer";
         location = "Bengaluru / Bangalore, India";
         experience = "1 Year 8 Month";
