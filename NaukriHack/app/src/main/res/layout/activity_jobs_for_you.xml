@@ -9,10 +9,10 @@
     android:weightSum="1">
     <RelativeLayout
         android:background="#fff"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_weight="0.04">
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
         <TextView
+            android:id="@+id/titleJobSearch"
             android:padding="2dp"
             android:gravity="center"
             android:text="Jobs for You"
@@ -21,12 +21,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/cancelJobSearch"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/cross"
+            android:src="@drawable/close"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/jobListRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            />
     </RelativeLayout>
 </LinearLayout>

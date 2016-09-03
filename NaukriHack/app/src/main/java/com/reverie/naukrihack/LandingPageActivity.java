@@ -8,7 +8,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +17,6 @@ import android.widget.Toast;
 
 import com.reverie.Listener.LocalizeListener;
 import com.reverie.Network.LocalizeAsync;
-import com.reverie.model.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -171,6 +169,7 @@ public class LandingPageActivity extends AppCompatActivity
         } else if (id == R.id.nav_search_job) {
             startActivity(new Intent(getApplicationContext(),SearchJobs.class));
 
+            //startActivity(new Intent(getApplicationContext(),JobsForYou.class));
         } else if (id == R.id.nav_about) {
 
         }

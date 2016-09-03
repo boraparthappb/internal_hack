@@ -9,7 +9,10 @@
 
     <RelativeLayout
         android:id="@+id/mainRL"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:orientation="horizontal">
@@ -39,31 +42,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/recuiter_lay2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:background="@drawable/mnj_jobsforyou"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:onClick="click">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:textColor="#FFF"
-                android:textSize="28sp" />
-
-            <TextView
-                android:id="@+id/jobs4u"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jobs for you" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/recuiter_lay3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,6 +65,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Critical\nactions" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recuiter_lay2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/mnj_jobsforyou"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="click">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#FFF"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/jobs4u"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jobs for you" />
         </LinearLayout>
     </RelativeLayout>
 
