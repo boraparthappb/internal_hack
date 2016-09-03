@@ -8,7 +8,7 @@ public class SearchJobs {
     public String jobOrg;
     public String jobLoc;
     public String jobKeySkills;
-    private static String jobsData[][] = new String[10][5];
+    public static String jobsData[][] = new String[10][5];
     static {
         jobsData[0][0] = "Software Engineer";
         jobsData[0][1] = "BangBit Technologies Private Limited";
@@ -45,8 +45,5 @@ public class SearchJobs {
         jobsData[5][2] = "0-4 yrs";
         jobsData[5][3] = "Bengaluru, Mumbai, Chennai, Pune, Hyderabad, Delhi NCR, Ahmedabad, Kolkata, All India";
         jobsData[5][4] = "PHP, .NET, dot net, vb, Fresher, Java, ASP.Net, C#, SQL Server, HTML, J2Ee";
-    }
-    public SearchJobs(){
-
     }
 }

@@ -370,5 +370,4 @@ public class UserDetails extends AppCompatActivity {
             return jObj;
         }
     }
-
 }
