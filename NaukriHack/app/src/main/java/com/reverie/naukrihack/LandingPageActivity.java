@@ -176,6 +176,9 @@ public class LandingPageActivity extends AppCompatActivity
         else if (id== R.id.nav_language){
             callLocalize(item.getTitle());
         }
+        else if (id== R.id.nav_faq){
+            startActivity(new Intent(getApplicationContext(),Faq.class));
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -185,7 +188,6 @@ public class LandingPageActivity extends AppCompatActivity
     private void callLocalize(CharSequence title) {
         if (title.toString().contains("हिन्दी")){
 
-            Log.e("inside if","---");
             ArrayList<String> inStrings = new ArrayList<String>();
             for (String key:mapEngView.keySet()){
                 inStrings.add(key);

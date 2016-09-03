@@ -6,4 +6,38 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+
+    <string name="faqInfo">These are some of the most frequently asked questions about naukri.com.Do write to us on android@naukri.com for more queries.</string>
+    <string name="faq_a1">By default the results are sorted on Relevance. You can change this from the ‘Refine’ layer by pressing the icon on the top right side of the screen. Change the ‘Sort By’ setting from ‘Relevance’ to ‘Freshness’ to see the latest jobs.</string>
+    <string name="faq_a10">Please make sure you have an active internet connection and try again. If the issue still persists, contact us with details on ‘android@naukri.com’.</string>
+    <string name="faq_a11">At times on a slow internet connection it might take some time to reflect the changes. You should wait for a few minutes and see if it’s updated. If not, please contact us with details on ‘android@naukri.com’.</string>
+    <string name="faq_a12">If it’s still red, that means there is something that needs your attention. For example, in the ‘Employment Details’ section, the ‘Job Profile’ field should have a minimum of 5 words</string>
+    <string name="faq_a13">Once you have installed either of the applications, please make sure you sign-in to those applications. The option to upload might not be available if you are not signed in.</string>
+    <string name="faq_a14">This might happen if there are a lot of applications running on your device. We recommend you close the other running apps.</string>
+    <string name="faq_a15">Please uninstall the existing app and re-install the app from the Google Play Store. Also, please let us know about this by writing to us on ‘android@naukri.com’.</string>
+    <string name="faq_a2">You can access the saved jobs from the ‘Jobs for You’ Screen link in the main navigation.</string>
+    <string name="faq_a3">If you don’t see new jobs there, it means no new matching jobs have been posted since the last time you checked. It would be a good idea to keep checking this screen every now and then for new jobs.</string>
+    <string name="faq_a4">Please make sure you have updated your key skills in your profile. Relevant and updated key skills will help us find the right jobs for you.</string>
+    <string name="faq_a5">You can apply to 50 jobs in one day.</string>
+    <string name="faq_a6">You can apply to 150 jobs in a month.</string>
+    <string name="faq_a7">The apply limit is reset on the 1st day of every month.</string>
+    <string name="faq_a8">The screen can be ‘Pulled Down’ to refresh. Once you refresh the screen, the latest jobs applied to will start appearing as well.</string>
+    <string name="faq_a9">Always ensure you apply to the relevant jobs only. Some recruiters might take time in going through all the applications before contacting the applicants. Whenever a recruiter views or downloads your profile, that info will be updated in the ‘Profile Performance’ screen in the app.</string>
+    <string name="faq_details">Get answer to the most popular Questions about this App</string>
+    <string name="faq_q1">I don’t see any new jobs in the search results.</string>
+    <string name="faq_q10">There is an error in updating my profile.</string>
+    <string name="faq_q11">The details are not getting updated even though I have made the changes.</string>
+    <string name="faq_q12">The tiles on the dashboard screen still shows a red exclamation mark even though I have filled everything?</string>
+    <string name="faq_q13">I don’t see the option to upload the Resume using Google Drive or Dropbox.</string>
+    <string name="faq_q14">The app is too slow?</string>
+    <string name="faq_q15">Unable to update the app to the latest version?</string>
+    <string name="faq_q2">Where can I find the Saved Jobs?</string>
+    <string name="faq_q3">The Recommended Jobs are not getting updated?</string>
+    <string name="faq_q4">The Recommended Jobs are not relevant?</string>
+    <string name="faq_q5">How many jobs can I apply to in a day?</string>
+    <string name="faq_q6">How many jobs can I apply to in a month?</string>
+    <string name="faq_q7">When does the apply limit get reset?</string>
+    <string name="faq_q8">I don’t see the latest jobs I have applied for in the Application History Screen.</string>
+    <string name="faq_q9">Why am I not getting any calls even though I have been applying to so many jobs?</string>
 </resources>
