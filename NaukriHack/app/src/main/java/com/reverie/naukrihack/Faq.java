@@ -24,6 +24,9 @@ public class Faq extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
 
+        TextView faqHeader = (TextView)findViewById(R.id.faqHead);
+        TextView faqInfo = (TextView)findViewById(R.id.faqInfo);
+
         TextView faq_q1 = (TextView)findViewById(R.id.faq_q1);
         TextView faq_q2 = (TextView)findViewById(R.id.faq_q2);
         TextView faq_q3 = (TextView)findViewById(R.id.faq_q3);
@@ -55,6 +58,10 @@ public class Faq extends AppCompatActivity {
         TextView faq_a13 = (TextView)findViewById(R.id.faq_a13);
         TextView faq_a14 = (TextView)findViewById(R.id.faq_a14);
         TextView faq_a15 = (TextView)findViewById(R.id.faq_a15);
+
+        mapEngView.put("Frequently\nAsked\nQuestions",faqHeader);
+        mapEngView.put(getResources().getString(R.string.faqInfo),faqInfo);
+
 
         mapEngView.put(getResources().getString(R.string.faq_q1),faq_q1);
         mapEngView.put(getResources().getString(R.string.faq_q2),faq_q2);

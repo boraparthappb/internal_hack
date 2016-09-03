@@ -14,11 +14,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/faqHead"
             android:text="Frequently\nAsked\nQuestions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="28sp" />
         <TextView
+            android:id="@+id/faqInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/faqInfo"
