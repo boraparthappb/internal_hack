@@ -52,7 +52,7 @@ public class LocalizeAsync extends AsyncTask<String, Integer, String> {
     protected String doInBackground(String[] type) {
         if (true) {//TODO check network connection here
 //            String localizationUrl = "http://api.revup.reverieinc.com/v2/localization?";
-            String localizationUrl = "http://beta.api.revup.reverieinc.com/v2/localization?";
+            String localizationUrl = "http://beta.auth.revup.reverieinc.com/apiman-gateway/HelloBrother/localization/1.0?";
 //            String localizationUrl = "http://beta.api.revup.reverieinc.com/v2/localization?target_lang=Assamese&source_lang=english&domain=3";
 
             StringBuilder urlAppend = new StringBuilder();
@@ -81,7 +81,7 @@ public class LocalizeAsync extends AsyncTask<String, Integer, String> {
                 urlConnection.setReadTimeout(7000);
 
                 JSONObject jsonParam = getJsonObj(inputStrings);
-//                    Log.e("jsonParam", "" + jsonParam);
+                    Log.e("jsonParam", "" + jsonParam);
 
 
                 OutputStream os = urlConnection.getOutputStream();
