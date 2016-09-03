@@ -9,10 +9,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+
+import static android.R.attr.id;
 
 public class LandingPageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    HashMap<String, View> mapEngView=new HashMap<String, View>();
+    HashMap<String, MenuItem> mapEngMenuItem=new HashMap<String, MenuItem>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +45,31 @@ public class LandingPageActivity extends AppCompatActivity
         // get menu from navigationView
         Menu menu = navigationView.getMenu();
         MenuItem login = menu.findItem(R.id.nav_login);
-        login.setTitle("Partha");
+        MenuItem register = menu.findItem(R.id.nav_register);
+        MenuItem searchJobs = menu.findItem(R.id.nav_search_job);
+        MenuItem aboutUs = menu.findItem(R.id.nav_about);
+        MenuItem fastForward = menu.findItem(R.id.nav_fast_forward);
+        MenuItem faqs = menu.findItem(R.id.nav_faq);
+        MenuItem feedback = menu.findItem(R.id.nav_feedback);
+        MenuItem promote = menu.findItem(R.id.nav_promoteApp);
+        mapEngMenuItem.put("Login",login);
+        mapEngMenuItem.put("Register",register);
+        mapEngMenuItem.put("Search Jobs",searchJobs);
+        mapEngMenuItem.put("About us",aboutUs);
+        mapEngMenuItem.put("Fast Forward",fastForward);
+        mapEngMenuItem.put("FAQs",faqs);
+        mapEngMenuItem.put("Feedback",feedback);
+        mapEngMenuItem.put("Promote this app",promote);
 
+        TextView recuiterMsg = (TextView)findViewById(R.id.recuiterMsg);
+        TextView jobs4u = (TextView)findViewById(R.id.jobs4u);
+        TextView critical = (TextView)findViewById(R.id.critical_noti);
+        TextView profileViews = (TextView)findViewById(R.id.profileViews);
+
+        mapEngView.put("Recuiter\nmessages",recuiterMsg);
+        mapEngView.put("Jobs for you",jobs4u);
+        mapEngView.put("Critical\nactions",critical);
+        mapEngView.put("Profile\nViews",profileViews);
 
     }
 
@@ -94,4 +127,23 @@ public class LandingPageActivity extends AppCompatActivity
     }
 
 
+    public void click(View view) {
+        int id=view.getId();
+        switch (id){
+            case R.id.recuiter_lay:
+                Toast.makeText(this, "Recuiter\n" +
+                        "messages", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.recuiter_lay2:
+                Toast.makeText(this, "Jobs for you", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.recuiter_lay3:
+                Toast.makeText(this, "Critical\n" +
+                        "actions", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.profileViewLL:
+                Toast.makeText(this, "Profile\nVIews", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 }
