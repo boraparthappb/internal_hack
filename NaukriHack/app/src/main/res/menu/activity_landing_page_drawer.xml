@@ -34,6 +34,9 @@
             android:id="@+id/nav_promoteApp"
             android:icon="@drawable/ic_menu_promote"
             android:title="Promote this app" />
+        <item
+            android:id="@+id/nav_language"
+            android:title="हिन्दी" />
     </group>
 
 

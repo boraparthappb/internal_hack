@@ -33,7 +33,7 @@ public class UserDetails extends AppCompatActivity {
     private HashMap<String, TextView> stringViewMap;
     public static HashMap<String, String> stringEngHindMap;
     private ArrayList<String> userDetailsStrings;
-    public static boolean isHindi = false;
+    public static boolean isHindi = true;
     private TextView pageTitle, userName, userDesignation, userLocation, userExp, userContactDetails, userMail,userPhone,
             resumeHeadline, resumeHeadlineValue, keySkills, keySkillsValue, empDetails, empDetailsDesignation,
             empDetailsFromTo, empDetailsRole, ITSkills, ITSkillsName1, ITSkillsName2, ITSkillsExp1, ITSkillsExp2,
@@ -88,6 +88,9 @@ public class UserDetails extends AppCompatActivity {
         Set<String> keySet = stringViewMap.keySet();
         for (String key: keySet){
             (stringViewMap.get(key)).setText(stringEngHindMap.get(key));
+            if(key.contains("Software")){
+                Log.d("Tag",""+key);
+            }
         }
     }
 

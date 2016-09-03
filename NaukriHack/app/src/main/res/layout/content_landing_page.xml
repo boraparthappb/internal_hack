@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_landing_page"
     android:layout_width="match_parent"
@@ -8,4 +7,112 @@
     tools:context="com.reverie.naukrihack.LandingPageActivity"
     tools:showIn="@layout/app_bar_landing_page">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/mainRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/recuiter_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recruiter_message"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="30dp"
+            android:onClick="click">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#FFF"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/recuiterMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recuiter\nmessages" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recuiter_lay2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/mnj_jobsforyou"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="click">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#FFF"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/jobs4u"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jobs for you" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recuiter_lay3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/notification"
+            android:gravity="center"
+            android:padding="30dp"
+            android:orientation="vertical"
+            android:onClick="click">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#FFF"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/critical_noti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Critical\nactions" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profileViewLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainRL"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/views"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:onClick="click">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="#FFF"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/profileViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile\nViews"/>
+    </LinearLayout>
+
+</RelativeLayout>

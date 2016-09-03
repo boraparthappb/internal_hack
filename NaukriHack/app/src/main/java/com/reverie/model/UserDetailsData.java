@@ -118,7 +118,6 @@ public class UserDetailsData {
         userDetailsStrings.add(personelDetailses.maritalStatus);
         userDetailsStrings.add("Permanent Address");
         userDetailsStrings.add(personelDetailses.permanentAddress);
-
         return userDetailsStrings;
     }
 }
