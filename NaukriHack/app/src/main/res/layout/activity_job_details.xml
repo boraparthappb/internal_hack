@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_job_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDDDD"
+    android:weightSum="10"
+    tools:context="com.reverie.naukrihack.JobDetails">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/jobDetailsTitle"
+            android:layout_weight="8"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Job Details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/close"
+            android:src="@drawable/close"
+            android:scaleType="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:padding="5dp"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/jobDetailsjobTitle"
+                android:textSize="20dp"
+                android:textColor="@color/txt_color_job_name"
+                android:text="Software Professional- Java/ J2ee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:textSize="16dp"
+                android:id="@+id/jobDetailsOrg"
+                android:textColor="@color/apply_status_job_name_color"
+                android:text="Global Hunt India Pvt. Ltd."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/jobDetailsExp"
+                    android:text="3 - 8 Years"
+                    android:padding="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/jobDetailsLoc"
+                    android:text="Bengaluru/Bangalore, Pune, Noida"
+                    android:padding="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/posted_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/jobDetailsPostedOn"
+                    android:text="Posted on 05 Sep, 2016"
+                    android:padding="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/jobDetailsDesc"
+                android:textSize="20dp"
+                android:textColor="@color/txt_color_input"
+                android:text="Job Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:textSize="16dp"
+                android:id="@+id/jobDetailsDescriptionValue"
+                android:textColor="@color/apply_status_job_name_color"
+                android:text="Experience MUST in Core Java, Web services, JMS technology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/jobDetailsIndustry"
+                    android:text="Industry"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="IT-Software / Software Services"
+                    android:id="@+id/jobDetailsIndustryValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/jobDetailsFuncArea"
+                    android:text="Functional Area"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="IT Software- Application Programming, Maintenance"
+                    android:id="@+id/jobDetailsFuncAreaValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/jobDetailsRole"
+                    android:text="Role"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="Software Developer"
+                    android:id="@+id/jobDetailsRoleValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/jobDetailskeySkill"
+                    android:text="Key Skills"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="Java Web Services, JMS, J2Ee, Core Java"
+                    android:id="@+id/jobDetailskeySkillValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/jobDetailsRoleCat"
+                    android:text="Role Category"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="Programming and Design"
+                    android:id="@+id/jobDetailsRoleCatValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/jobDetailsDesCandPro"
+                android:textSize="20dp"
+                android:textColor="@color/txt_color_input"
+                android:text="Desired Candidate profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:gravity="center|left|top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/education_icon_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/jobDetailsCandEdu"
+                    android:textColor="@color/txt_color_input"
+                    android:text="UG: B.Tech/B.E. - Any Specialization, BCA - Computers, B.Sc - Any Specialization, Computers, PG:M.Tech - Any Specialization, MCA - Computers, Doctorate:Any Doctorate - Any Specialization, Doctorate Not Required"
+                    android:padding="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center|left|top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/candidatedetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:id="@+id/jobDetailsCandExp"
+                    android:text="Excellent knowledge of Relational Databases, SQL and ORM technologies (JPA2, Hibernate)
+Experience in the Spring Framework
+Experience in developing web applications using at least one popular web framework (JSF, jQuery, Spring MVC)
+Experience with test-driven development"
+                    android:padding="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/jobDetailsEmployerDetails"
+                android:textSize="20dp"
+                android:textColor="@color/txt_color_input"
+                android:text="Employer Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/txt_color_label"
+                    android:id="@+id/jobDetailsEmployerDetailsCompName"
+                    android:text="Company Name"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="Global Hunt India Pvt. Ltd."
+                    android:id="@+id/jobDetailsEmployerDetailsCompNameValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="2"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/txt_color_label"
+                    android:id="@+id/jobDetailsEmployerDetailsCompWeb"
+                    android:text="Company Websites"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/txt_color_input"
+                    android:text="Not Mentioned"
+                    android:id="@+id/jobDetailsEmployerDetailsCompWebValue"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/bg_bullet"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/view_contact_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="@color/txt_color_input"
+                    android:id="@+id/jobDetailsConDetails"
+                    android:text="View Contact Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/bg_bullet"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ssa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="@color/txt_color_input"
+                    android:id="@+id/jobDetailsSendjobs"
+                    android:text="Send me Jobs Like This"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/bg_bullet"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="22dp"
+                    android:textColor="@color/txt_color_input"
+                    android:id="@+id/jobDetailsSimilarJob"
+                    android:text="Similar Jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:padding="2dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:src="@drawable/share"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/apply"
+            android:padding="2dp"
+            android:textColor="#fff"
+            android:background="@color/txt_color_job_name"
+            android:textSize="16dp"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="Apply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/star_blue"
+            android:scaleType="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

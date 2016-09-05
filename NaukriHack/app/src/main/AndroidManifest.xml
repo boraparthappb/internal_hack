@@ -24,7 +24,8 @@
         <activity android:name=".UserDetails" />
         <activity android:name=".JobsForYou" />
         <activity android:name=".Faq" />
-        <activity android:name=".SearchJobs"></activity>
+        <activity android:name=".SearchJobs" />
+        <activity android:name=".JobDetails"></activity>
     </application>
 
 </manifest>
