@@ -51,7 +51,7 @@ public class JobsForYou extends AppCompatActivity {
             }
         });
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.jobListRV);
-        JobSearchAdapter hAdapter = new JobSearchAdapter(getApplicationContext());
+        JobSearchAdapter hAdapter = new JobSearchAdapter(getApplicationContext(),false);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -59,7 +59,7 @@ public class JobsForYou extends AppCompatActivity {
         hAdapter.notifyDataSetChanged();
         if(UserDetails.isHindi){
             ArrayList<String> inString = new ArrayList<>();
-            for(int i=0;i<6/*SearchJobs.jobsData.length*/;i++){
+            for(int i=0;i<11/*SearchJobs.jobsData.length*/;i++){
                 for (int j = 0;j<SearchJobs.jobsData[i].length;j++){
                     inString.add(SearchJobs.jobsData[i][j]);
                 }
@@ -74,7 +74,7 @@ public class JobsForYou extends AppCompatActivity {
             jobTitle.setText(stringEngHindMap.get("Jobs for You"));
         }
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.jobListRV);
-        JobSearchAdapter hAdapter = new JobSearchAdapter(getApplicationContext());
+        JobSearchAdapter hAdapter = new JobSearchAdapter(getApplicationContext(), UserDetails.isHindi);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -83,8 +83,9 @@ public class JobsForYou extends AppCompatActivity {
     }
 
     public class JobSearchAdapter extends RecyclerView.Adapter<JobSearchAdapter.JobViewHolder>{
-        public JobSearchAdapter(Context applicationContext) {
-            
+        private boolean isHindi = false;
+        public JobSearchAdapter(Context applicationContext,boolean isHindi) {
+            this.isHindi = isHindi;
         }
 
         public class JobViewHolder extends RecyclerView.ViewHolder {
@@ -110,7 +111,7 @@ public class JobsForYou extends AppCompatActivity {
         public void onBindViewHolder(JobSearchAdapter.JobViewHolder holder, int position) {
             ScaleAnimation animation = new ScaleAnimation(0.7f,1f,0.7f,1f,Animation.RELATIVE_TO_PARENT,0.5f, Animation.RELATIVE_TO_PARENT,0.5f);
             animation.setDuration(100);
-            if(UserDetails.isHindi && stringEngHindMap.size()>0){
+            if(isHindi && stringEngHindMap.size()>0){
                 holder.title.setText(stringEngHindMap.get(SearchJobs.jobsData[position][0]));
                 holder.org.setText(stringEngHindMap.get(SearchJobs.jobsData[position][1]));
                 holder.exp.setText(stringEngHindMap.get(SearchJobs.jobsData[position][2]));
@@ -128,7 +129,7 @@ public class JobsForYou extends AppCompatActivity {
         }
         @Override
         public int getItemCount() {
-            return 6;
+            return 11;
         }
     }
 
