@@ -242,10 +242,6 @@ public class UserDetails extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pgb = new ProgressDialog(mContext);
-            pgb.setMessage("Loading...");
-            pgb.setCancelable(false);
-            pgb.show();
         }
 
         /**
@@ -257,9 +253,9 @@ public class UserDetails extends AppCompatActivity {
         @Override
         protected String doInBackground(Void... args) {
             //TODO check network connection here
-            String localizationUrl = "http://beta.auth.revup.reverieinc.com/apiman-gateway/NayanCalendarTechnology/localization/1.0?";
-            String api_key = "gmbhXL3UV1VLPnt1CTfeVKJpLN8Bt8N9d5fQ",
-                    app_id = "calender.rev.com.activity";
+            String localizationUrl = "https://api-revup.reverieinc.com/apiman-gateway/NaukriHack/localization/1.0?";
+            String api_key = "DagJl4II5vLATNUU7BKFLSiMMnE7kQ3wOn6L",
+                    app_id = "com.naukri.hack";
             StringBuilder urlAppend = new StringBuilder();
             urlAppend.append("target_lang=");
             urlAppend.append(targetLang.toLowerCase());
@@ -350,7 +346,6 @@ public class UserDetails extends AppCompatActivity {
                 UserDetails.isHindi = false;
             }
             localizePage();
-            pgb.dismiss();
         }
 
         private JSONObject getJsonObj() {
